@@ -1,9 +1,10 @@
-// @import './Components/header';
-// @import './Components/footer';
+@import './components/header.scss';
+@import './components/footer.scss';
 
 
-// @import './Pages/accueil';
-// @import './Pages/connexion';
+@import './pages/home.scss';
+@import './pages/login.scss';
+@import './index.scss';
 // @import './Pages/user';
 
 // @import './Layout/responsive';
