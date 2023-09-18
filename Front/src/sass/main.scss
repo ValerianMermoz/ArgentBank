@@ -1,10 +1,17 @@
-@import './components/header.scss';
-@import './components/footer.scss';
+@import './01_base/index.scss';
+
+@import './02_utils/mixins.scss';
+
+@import './03_components/account.scss';
+@import './03_components/banner.scss';
+@import './03_components/card.scss';
+@import './03_components/footer.scss';
+@import './03_components/form.scss';
+@import './03_components/header.scss';
+@import './03_components/edit.scss';
+
+@import './04_pages/home.scss';
+@import './04_pages/login.scss';
+@import './04_pages/user.scss';
 
 
-@import './pages/home.scss';
-@import './pages/login.scss';
-@import './index.scss';
-// @import './Pages/user';
-
-// @import './Layout/responsive';

@@ -1,5 +1,3 @@
-
-
 const Card = ({ title, content, image }) => {
   return (
     <div className="feature-item">
