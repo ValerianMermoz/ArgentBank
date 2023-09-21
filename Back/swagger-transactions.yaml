@@ -59,11 +59,6 @@ paths:
           description: "Attach Bearer JWT token"
           required: true
           type: string
-        - name: accountId
-          in: path
-          description: "User's account ID"
-          required: true
-          type: string
         - name: transaction_id
           in: path
           description: "Transaction ID"
@@ -83,7 +78,7 @@ paths:
         '500':
           description: "Internal Server Error"
 
-  /{accountId}/transactions/{transaction_id}/:
+  /transactions/{transaction_id}/:
     patch:
       security:
         - Bearer: []

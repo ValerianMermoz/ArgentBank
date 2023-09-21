@@ -1,3 +1,9 @@
+// Définissez des constantes pour les types d'action
+const LOGIN = "LOGIN";
+const USER = "USER";
+const USER_NAME = "USER_NAME";
+const LOGOUT = "LOGOUT";
+
 const initialState = {
   isAuthenticated: false,
   user: {
@@ -13,14 +19,14 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "LOGIN":
+    case LOGIN:
       return {
         ...state,
         isAuthenticated: true,
         token: action.payload,
       };
 
-    case "USER":
+    case USER:
       return {
         ...state,
         user: {
@@ -29,7 +35,7 @@ const reducer = (state = initialState, action) => {
         },
       };
 
-    case "USER_NAME":
+    case USER_NAME:
       return {
         ...state,
         user: {
@@ -38,7 +44,7 @@ const reducer = (state = initialState, action) => {
         },
       };
 
-    case "LOGOUT":
+    case LOGOUT:
       return initialState;
 
     default:

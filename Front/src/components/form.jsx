@@ -22,14 +22,22 @@ const Form = () => {
       return;
     }
 
-    if (rememberMe) {
-      Cookies.set(
-        "rememberMe",
-        JSON.stringify({ username, password }, { expires: 7 })
-      );
-    } else {
-      Cookies.remove("rememberMe");
-    }
+    const handleRememberMe = (rememberMe, username, password) => {
+      if (rememberMe) {
+        Cookies.set(
+          "rememberMe",
+          JSON.stringify({ username, password }, { expires: 7 }),
+          {
+            secure: true, // securise les cookies
+            sameSite: "strict", //cookies uniquement sur ce site
+          }
+        );
+      } else {
+        Cookies.remove("rememberMe");
+      }
+    };
+
+    handleRememberMe(rememberMe, username, password);
 
     dispatch(login(username, password));
   };

@@ -8,8 +8,8 @@ import Circleuser from "../assets/Circleuser.png";
 
 const Header = () => {
   const lienActif = useLocation();
-  const isAuthenticated = useSelector((state) => state.isAuthenticated);
-  const userName = useSelector((state) => state.user.userName);
+  const { isAuthenticated, user } = useSelector((state) => state);
+  const { userName } = user;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
