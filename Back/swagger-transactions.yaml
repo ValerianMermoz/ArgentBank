@@ -167,6 +167,33 @@ definitions:
         type: "string"
       body:
         type: "object"
+  Transaction:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+        description: "transaction ID"
+      created:
+        type: "string"
+        description: "transaction date"
+      description:
+        type: "string"
+        description: "transaction description"
+      amount:
+        type: "number"
+        description: "transaction amount"
+      balance:
+        type: "number"
+        description: "account balance after transaction"
+      transactionType:
+        type: "string"
+        description: "transaction type"
+      category:
+        type: "string"
+        description: "transaction category"
+      note:
+        type: "string"
+        description: "user's notes for transaction"
   EditTransaction:
     type: "object"
     properties:
